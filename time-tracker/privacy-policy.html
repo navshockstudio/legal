@@ -6,534 +6,340 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Política de Privacidad | Time Tracker</title>
   <meta name="description"
-    content="Política de privacidad oficial de Time Tracker. Información sobre recopilación, uso y protección de datos personales." />
+    content="Política de privacidad de Time Tracker. Transparencia y seguridad en el manejo de tus datos." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --color-primary: #1a73e8;
-      --color-primary-dark: #1557b0;
-      --color-text-primary: #202124;
-      --color-text-secondary: #5f6368;
-      --color-text-tertiary: #80868b;
-      --color-border: #dadce0;
-      --color-border-light: #e8eaed;
-      --color-background: #ffffff;
-      --color-background-secondary: #f8f9fa;
-      --color-background-tertiary: #f1f3f4;
-      --color-success: #1e8e3e;
-      --color-success-bg: #e6f4ea;
-      --max-width: 800px;
-      --spacing-xs: 8px;
-      --spacing-sm: 16px;
-      --spacing-md: 24px;
-      --spacing-lg: 32px;
-      --spacing-xl: 48px;
+      --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Helvetica, Arial, sans-serif;
+      --color-bg: #fdfdfd;
+      --color-surface: #ffffff;
+      --color-text-main: #111827;
+      --color-text-muted: #4b5563;
+      --color-border: #e5e7eb;
+      --color-accent: #0f172a;
+      /* Slate 900 */
+      --color-link: #2563eb;
+      --spacing-unit: 1.5rem;
+      --max-width: 46rem;
+      /* aprox 736px para lectura óptima */
     }
 
     * {
-      margin: 0;
-      padding: 0;
       box-sizing: border-box;
     }
 
-    html {
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
     body {
-      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      color: var(--color-text-primary);
-      background-color: var(--color-background-secondary);
-      line-height: 1.6;
-      font-weight: 400;
+      margin: 0;
+      font-family: var(--font-sans);
+      background-color: var(--color-bg);
+      color: var(--color-text-main);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 4rem;
     }
 
-    /* Header */
-    .header {
-      background-color: var(--color-background);
-      border-bottom: 1px solid var(--color-border);
-      padding: var(--spacing-lg) var(--spacing-md);
-    }
-
-    .header-container {
+    /* Contenedor central de lectura */
+    .container {
       max-width: var(--max-width);
       margin: 0 auto;
+      padding: 0 1.5rem;
     }
 
-    .app-name {
+    /* Header minimalista */
+    header {
+      padding-top: 5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--color-border);
+      margin-bottom: 3rem;
+    }
+
+    .brand {
       font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--color-text-secondary);
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: var(--spacing-xs);
+      letter-spacing: 0.05em;
+      color: var(--color-text-muted);
+      margin-bottom: 1rem;
+      display: block;
     }
 
-    .page-title {
-      font-size: 2rem;
+    h1 {
+      font-size: 2.25rem;
       font-weight: 700;
-      color: var(--color-text-primary);
-      margin-bottom: var(--spacing-sm);
-      line-height: 1.2;
+      letter-spacing: -0.025em;
+      margin: 0 0 1rem 0;
+      color: var(--color-text-main);
     }
 
-    .page-description {
-      font-size: 1rem;
-      color: var(--color-text-secondary);
-      line-height: 1.5;
-      max-width: 600px;
+    .meta {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
     }
 
-    /* Main Content */
-    .main-content {
-      max-width: var(--max-width);
-      margin: var(--spacing-xl) auto;
-      padding: 0 var(--spacing-md);
+    .last-updated {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-feature-settings: "tnum";
+      font-variant-numeric: tabular-nums;
     }
 
-    .content-card {
-      background-color: var(--color-background);
-      border: 1px solid var(--color-border);
-      border-radius: 8px;
-      overflow: hidden;
+    /* Tipografía de contenido */
+    main p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      color: var(--color-text-muted);
     }
 
-    /* Update Badge */
-    .update-notice {
-      background-color: var(--color-success-bg);
-      border-left: 4px solid var(--color-success);
-      padding: var(--spacing-sm) var(--spacing-md);
-      margin-bottom: 0;
-    }
-
-    .update-notice p {
-      font-size: 0.875rem;
-      color: var(--color-success);
-      font-weight: 500;
-      margin: 0;
-    }
-
-    /* Sections */
-    .section {
-      padding: var(--spacing-lg) var(--spacing-md);
-      border-bottom: 1px solid var(--color-border-light);
-    }
-
-    .section:last-child {
-      border-bottom: none;
-    }
-
-    .section-title {
-      font-size: 1.25rem;
+    main h2 {
+      font-size: 1.5rem;
       font-weight: 600;
-      color: var(--color-text-primary);
-      margin-bottom: var(--spacing-md);
-      line-height: 1.3;
+      color: var(--color-text-main);
+      margin-top: 3.5rem;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.015em;
     }
 
-    .section-content p {
-      font-size: 0.9375rem;
-      color: var(--color-text-secondary);
-      line-height: 1.7;
-      margin-bottom: var(--spacing-sm);
+    main ul {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+      color: var(--color-text-muted);
     }
 
-    .section-content p:last-child {
-      margin-bottom: 0;
+    main li {
+      margin-bottom: 0.5rem;
+      padding-left: 0.5rem;
     }
 
-    .section-content strong {
-      color: var(--color-text-primary);
+    strong {
       font-weight: 600;
+      color: var(--color-text-main);
     }
 
-    /* Lists */
-    .section-content ul {
-      list-style: none;
-      padding: 0;
-      margin: var(--spacing-sm) 0;
-    }
-
-    .section-content ul li {
-      position: relative;
-      padding-left: 24px;
-      margin-bottom: var(--spacing-sm);
-      font-size: 0.9375rem;
-      color: var(--color-text-secondary);
-      line-height: 1.7;
-    }
-
-    .section-content ul li::before {
-      content: "•";
-      position: absolute;
-      left: 8px;
-      color: var(--color-text-tertiary);
-      font-weight: 700;
-    }
-
-    /* Highlight */
-    .highlight {
-      background-color: #fff3cd;
-      border: 1px solid #ffc107;
-      padding: 2px 6px;
-      border-radius: 3px;
-      color: #856404;
-      font-weight: 500;
-    }
-
-    /* Links */
     a {
-      color: var(--color-primary);
+      color: var(--color-link);
       text-decoration: none;
-      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
     }
 
     a:hover {
-      color: var(--color-primary-dark);
-      text-decoration: underline;
+      border-bottom-color: var(--color-link);
     }
 
-    a:focus {
-      outline: 2px solid var(--color-primary);
-      outline-offset: 2px;
-      border-radius: 2px;
-    }
-
-    /* Contact Section */
-    .contact-info {
-      background-color: var(--color-background-tertiary);
+    /* Caja de contacto sutil */
+    .contact-box {
+      margin-top: 4rem;
+      padding: 2rem;
+      background-color: #f8fafc;
+      /* Slate 50 muy suave */
       border: 1px solid var(--color-border);
-      border-radius: 4px;
-      padding: var(--spacing-md);
-      margin-top: var(--spacing-md);
+      border-radius: 8px;
     }
 
-    .contact-row {
-      display: flex;
-      align-items: baseline;
-      margin-bottom: var(--spacing-sm);
-      font-size: 0.9375rem;
+    .contact-box h2 {
+      margin-top: 0;
+      font-size: 1.25rem;
     }
 
-    .contact-row:last-child {
-      margin-bottom: 0;
-    }
-
-    .contact-label {
-      font-weight: 600;
-      color: var(--color-text-primary);
-      min-width: 120px;
-      flex-shrink: 0;
-    }
-
-    .contact-value {
-      color: var(--color-text-secondary);
+    .contact-box p {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
     }
 
     /* Footer */
-    .footer {
-      background-color: var(--color-background);
+    footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
       border-top: 1px solid var(--color-border);
-      padding: var(--spacing-lg) var(--spacing-md);
-      margin-top: var(--spacing-xl);
-    }
-
-    .footer-container {
-      max-width: var(--max-width);
-      margin: 0 auto;
       text-align: center;
-    }
-
-    .footer-text {
       font-size: 0.875rem;
-      color: var(--color-text-tertiary);
-      line-height: 1.5;
+      color: var(--color-text-muted);
     }
 
-    .footer-text a {
-      color: var(--color-text-secondary);
-      font-weight: 500;
-    }
-
-    .footer-text a:hover {
-      color: var(--color-primary);
-    }
-
-    /* Responsive */
-    @media (max-width: 640px) {
-      .page-title {
-        font-size: 1.5rem;
-      }
-
-      .section {
-        padding: var(--spacing-md) var(--spacing-sm);
-      }
-
-      .section-title {
-        font-size: 1.125rem;
-      }
-
-      .contact-row {
-        flex-direction: column;
-        gap: 4px;
-      }
-
-      .contact-label {
-        min-width: auto;
-      }
-    }
-
-    /* Print Styles */
+    /* Utilidades de impresión */
     @media print {
       body {
         background-color: white;
+        color: black;
       }
 
-      .content-card {
-        border: none;
-        box-shadow: none;
+      header {
+        padding-top: 0;
       }
 
-      .section {
-        page-break-inside: avoid;
+      .contact-box {
+        border: 1px solid #ccc;
+      }
+    }
+
+    /* Responsividad */
+    @media (max-width: 640px) {
+      header {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
       }
 
-      a {
-        color: var(--color-text-primary);
-        text-decoration: underline;
+      h1 {
+        font-size: 1.75rem;
       }
     }
   </style>
 </head>
 
 <body>
-  <header class="header">
-    <div class="header-container">
-      <div class="app-name">Time Tracker</div>
-      <h1 class="page-title">Política de Privacidad</h1>
-      <p class="page-description">
-        Esta política describe cómo Time Tracker recopila, utiliza y protege la información de los usuarios de la
-        aplicación.
-      </p>
-    </div>
-  </header>
-
-  <main class="main-content">
-    <div class="content-card">
-      <div class="update-notice">
-        <p>Última actualización: 28 de enero de 2026</p>
+  <div class="container">
+    <header>
+      <span class="brand">NavShock Studio</span>
+      <h1>Política de Privacidad</h1>
+      <div class="meta">
+        Aplicación: <strong>Time Tracker</strong><br />
+        <span class="last-updated">Última actualización: 28 de enero de 2026</span>
       </div>
+    </header>
 
-      <section class="section">
-        <div class="section-content">
-          <p>
-            <strong>NavShock Studio</strong> (en adelante, "nosotros", "nuestro" o "el desarrollador")
-            ha desarrollado la aplicación <strong>Time Tracker</strong> (en adelante, "la aplicación")
-            como una aplicación gratuita. Este servicio se proporciona sin costo alguno y está destinado
-            para su uso tal como se presenta.
-          </p>
-          <p>
-            Esta página se utiliza para informar a los visitantes sobre nuestras políticas con respecto
-            a la recopilación, uso y divulgación de información personal si alguien decide utilizar
-            nuestro servicio.
-          </p>
-          <p>
-            Si elige utilizar nuestro servicio, acepta la recopilación y el uso de información en
-            relación con esta política. La información que recopilamos se utiliza para proporcionar
-            y mejorar el servicio. No utilizaremos ni compartiremos su información con nadie, excepto
-            como se describe en esta Política de Privacidad.
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="section-title">1. Recopilación y Uso de Información</h2>
-        <div class="section-content">
-          <p>
-            Para una mejor experiencia, al utilizar nuestro servicio, es posible que le solicitemos
-            que nos proporcione cierta información. <span class="highlight">La aplicación no recopila,
-              transmite ni almacena información personal identificable en servidores externos</span>.
-          </p>
-          <p>
-            Toda la información que usted registra en la aplicación (incluyendo tiempos, notas,
-            categorías e imágenes) se almacena exclusivamente en su dispositivo local. Usted mantiene
-            el control total sobre sus datos en todo momento.
-          </p>
-          <p>
-            La aplicación está diseñada con un enfoque de privacidad primero (privacy-first),
-            garantizando que su información personal permanezca bajo su control y nunca sea
-            transmitida a servidores de terceros.
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="section-title">2. Permisos del Dispositivo</h2>
-        <div class="section-content">
-          <p>
-            La aplicación puede solicitar los siguientes permisos para proporcionar sus funcionalidades:
-          </p>
-          <ul>
-            <li>
-              <strong>Almacenamiento/Galería:</strong> Este permiso se utiliza únicamente para
-              permitirle adjuntar imágenes de su galería a sus registros de tiempo. Las imágenes
-              permanecen almacenadas localmente en su dispositivo y no se transmiten a ningún servidor.
-            </li>
-          </ul>
-          <p>
-            Todos los permisos solicitados son estrictamente necesarios para el funcionamiento de
-            las características de la aplicación y no se utilizan para ningún otro propósito.
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="section-title">3. Servicios de Terceros</h2>
-        <div class="section-content">
-          <p>
-            La aplicación utiliza servicios de terceros que pueden recopilar información utilizada
-            para identificar su dispositivo. Estos servicios son proporcionados por:
-          </p>
-          <ul>
-            <li>
-              <strong>Google Play Services:</strong> Utilizado para la distribución de la aplicación
-              y servicios básicos del sistema Android.
-              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
-                Ver Política de Privacidad de Google Play Services
-              </a>
-            </li>
-          </ul>
-          <p>
-            Le recomendamos que revise las políticas de privacidad de estos servicios de terceros
-            para comprender mejor cómo manejan su información.
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="section-title">4. Seguridad de los Datos</h2>
-        <div class="section-content">
-          <p>
-            Valoramos su confianza al proporcionarnos su información personal. Una de las principales
-            ventajas de <strong>Time Tracker</strong> es su arquitectura de almacenamiento local,
-            que proporciona las siguientes garantías de seguridad:
-          </p>
-          <ul>
-            <li>
-              Todos los datos se almacenan exclusivamente en su dispositivo y nunca se transmiten
-              a servidores externos.
-            </li>
-            <li>
-              La aplicación se beneficia de las características de seguridad integradas del sistema
-              operativo Android, incluyendo el sandboxing de aplicaciones y el cifrado del dispositivo.
-            </li>
-            <li>
-              No se realiza ninguna comunicación de red relacionada con sus datos personales.
-            </li>
-          </ul>
-          <p>
-            Sin embargo, tenga en cuenta que ningún método de almacenamiento es 100% seguro.
-            Le recomendamos mantener su dispositivo actualizado y protegido con las medidas de
-            seguridad apropiadas (contraseña, PIN, huella digital, etc.).
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="section-title">5. Retención y Eliminación de Datos</h2>
-        <div class="section-content">
-          <p>
-            Dado que todos los datos se almacenan localmente en su dispositivo:
-          </p>
-          <ul>
-            <li>
-              <strong>Retención:</strong> Los datos permanecen en su dispositivo mientras la
-              aplicación esté instalada o hasta que usted decida eliminarlos manualmente.
-            </li>
-            <li>
-              <strong>Eliminación:</strong> Puede eliminar todos sus datos en cualquier momento
-              desinstalando la aplicación o borrando los datos de la aplicación desde la configuración
-              de Android. NavShock Studio no mantiene copias de sus datos en ningún servidor.
-            </li>
-          </ul>
-          <p>
-            Le recomendamos que realice copias de seguridad de sus datos importantes antes de
-            desinstalar la aplicación o restablecer su dispositivo.
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="section-title">6. Privacidad de los Menores</h2>
-        <div class="section-content">
-          <p>
-            Nuestros servicios no están dirigidos a personas menores de 13 años. No recopilamos
-            conscientemente información personal identificable de niños menores de 13 años. Si
-            descubrimos que un niño menor de 13 años nos ha proporcionado información personal,
-            la eliminaremos inmediatamente de nuestros registros.
-          </p>
-          <p>
-            Si usted es padre o tutor y tiene conocimiento de que su hijo nos ha proporcionado
-            información personal, contáctenos para que podamos tomar las medidas necesarias.
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="section-title">7. Cambios a esta Política de Privacidad</h2>
-        <div class="section-content">
-          <p>
-            Podemos actualizar nuestra Política de Privacidad periódicamente. Por lo tanto, le
-            recomendamos que revise esta página periódicamente para cualquier cambio. Le notificaremos
-            cualquier cambio publicando la nueva Política de Privacidad en esta página.
-          </p>
-          <p>
-            Los cambios a esta Política de Privacidad son efectivos cuando se publican en esta página.
-            La fecha de "Última actualización" en la parte superior de esta política indica cuándo
-            se realizó la última revisión.
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2 class="section-title">8. Información de Contacto</h2>
-        <div class="section-content">
-          <p>
-            Si tiene alguna pregunta, inquietud o sugerencia sobre nuestra Política de Privacidad,
-            no dude en contactarnos:
-          </p>
-          <div class="contact-info">
-            <div class="contact-row">
-              <span class="contact-label">Desarrollador:</span>
-              <span class="contact-value">NavShock Studio</span>
-            </div>
-            <div class="contact-row">
-              <span class="contact-label">Correo electrónico:</span>
-              <span class="contact-value">navshockstudio@gmail.com</span>
-            </div>
-          </div>
-          <p style="margin-top: 16px;">
-            Nos esforzamos por responder a todas las consultas en un plazo razonable.
-          </p>
-        </div>
-      </section>
-    </div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-container">
-      <p class="footer-text">
-        © 2026 NavShock Studio. Todos los derechos reservados.
+    <main>
+      <p>
+        Esta Política de Privacidad describe cómo NavShock Studio ("nosotros",
+        "nuestro") recopila, utiliza y protege la información en relación con
+        el uso de la aplicación móvil <strong>Time Tracker</strong>. Al
+        descargar o utilizar la aplicación, usted acepta los términos
+        descritos en este documento.
       </p>
-      <p class="footer-text" style="margin-top: 8px;">
-        <a href="mailto:navshockstudio@gmail.com">navshockstudio@gmail.com</a>
+
+      <p>
+        Nuestro compromiso fundamental es la privacidad: Time Tracker ha sido
+        diseñada para funcionar de manera local, minimizando la dependencia de
+        servidores externos y otorgando al usuario el control total de sus
+        datos.
       </p>
-    </div>
-  </footer>
+
+      <h2>1. Recopilación y almacenamiento de datos</h2>
+      <p>
+        La aplicación opera bajo un principio de <strong>almacenamiento local</strong>.
+        Esto significa que:
+      </p>
+      <ul>
+        <li>
+          <strong>Datos de actividad:</strong> Los registros de tiempo, notas,
+          categorías y estadísticas se almacenan exclusivamente en la base de
+          datos interna de su dispositivo.
+        </li>
+        <li>
+          <strong>Sin transmisión externa:</strong> No enviamos sus registros
+          personales a servidores en la nube propios ni de terceros para su
+          análisis o venta.
+        </li>
+      </ul>
+
+      <h2>2. Permisos del dispositivo</h2>
+      <p>
+        Para ofrecer una funcionalidad completa, la aplicación puede solicitar
+        acceso a ciertas características de su dispositivo. Estos permisos son
+        estrictamente funcionales:
+      </p>
+      <ul>
+        <li>
+          <strong>Almacenamiento y Galería:</strong> Requerido únicamente si el
+          usuario decide adjuntar imágenes o evidencias a sus registros de
+          tiempo. Las imágenes seleccionadas permanecen en el dispositivo.
+        </li>
+      </ul>
+
+      <h2>3. Servicios de terceros y análisis</h2>
+      <p>
+        Aunque la aplicación no recopila datos personales directamente,
+        utilizamos servicios estándar de la industria para garantizar la
+        estabilidad y distribución de la aplicación:
+      </p>
+      <ul>
+        <li>
+          <strong>Google Play Services:</strong> Necesario para la gestión de
+          actualizaciones y librerías base del sistema Android.
+        </li>
+      </ul>
+      <p>
+        Estos proveedores pueden recopilar datos técnicos (como identificadores
+        de dispositivo o informes de fallos) sujetos a sus propias políticas
+        de privacidad, con el fin de mantener la operatividad del servicio.
+        Enlaces de interés:
+      </p>
+      <ul>
+        <li>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad de
+            Google</a>
+        </li>
+      </ul>
+
+      <h2>4. Seguridad de la información</h2>
+      <p>
+        La seguridad de sus datos está garantizada principalmente por el
+        entorno de su propio dispositivo. Utilizamos las API estándar de
+        Android y las mejores prácticas de desarrollo para asegurar que los
+        archivos locales de la aplicación no sean accesibles por otras
+        aplicaciones sin su autorización (sandboxing).
+      </p>
+      <p>
+        Recomendamos mantener su dispositivo actualizado y protegido (patrón,
+        PIN o biometría) para evitar accesos físicos no autorizados a sus
+        registros.
+      </p>
+
+      <h2>5. Retención y eliminación de datos</h2>
+      <p>
+        Al residir los datos únicamente en su dispositivo:
+      </p>
+      <ul>
+        <li>
+          <strong>Retención:</strong> Los datos existen mientras la aplicación
+          esté instalada y usted no los borre.
+        </li>
+        <li>
+          <strong>Eliminación:</strong> Usted puede eliminar sus datos en
+          cualquier momento borrando los registros dentro de la app, limpiando
+          el almacenamiento de la app desde los ajustes de Android, o
+          desinstalando la aplicación. Una vez realizada esta acción, los
+          datos son irrecuperables por nosotros, ya que no guardamos copias
+          externas.
+        </li>
+      </ul>
+
+      <h2>6. Privacidad de menores</h2>
+      <p>
+        Nuestros servicios no están dirigidos a menores de 13 años. No
+        recopilamos conscientemente información de identificación personal de
+        niños. Dado que la aplicación no requiere registro de cuenta, no
+        solicitamos edad ni datos demográficos.
+      </p>
+
+      <h2>7. Cambios en la política</h2>
+      <p>
+        Podemos actualizar nuestra Política de Privacidad ocasionalmente para
+        reflejar cambios funcionales o regulatorios. Se le notificará de
+        cualquier cambio relevante actualizando la fecha de "Última
+        actualización" en esta página o mediante una notificación dentro de la
+        aplicación si corresponde.
+      </p>
+
+      <div class="contact-box">
+        <h2>Contacto</h2>
+        <p>
+          Si tiene preguntas técnicas o legales sobre esta Política de
+          Privacidad, puede contactar al equipo de desarrollo:
+        </p>
+        <p>
+          <strong>Correo electrónico:</strong>
+          <a href="mailto:navshockstudio@gmail.com">navshockstudio@gmail.com</a>
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 NavShock Studio. Todos los derechos reservados.</p>
+    </footer>
+  </div>
 </body>
 
 </html>
